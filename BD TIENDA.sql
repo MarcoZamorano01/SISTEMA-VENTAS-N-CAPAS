@@ -1,0 +1,149 @@
+--BASE DE DATOS 1 TRABAJO EN AULA
+CREATE DATABASE TIENDA1;
+
+CREATE TABLE PERSONA (
+    IdPersona VARCHAR(10) NOT NULL,
+    Nombres VARCHAR(25) NOT NULL,
+    Apellidos VARCHAR(25) NOT NULL,
+    Telefono VARCHAR(10) NOT NULL,
+    Ci VARCHAR(10) NOT NULL,
+    Correo VARCHAR(30) NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdPersona)
+);
+
+CREATE TABLE USUARIO (
+    IdUsuario VARCHAR(10) NOT NULL,
+    IdPersona VARCHAR(10) NOT NULL,
+    NombreUser VARCHAR(25) NOT NULL,
+    Contraseña VARCHAR(25) NOT NULL,
+    FechaReg VARCHAR(10) NOT NULL,
+    PRIMARY KEY (IdUsuario),
+    FOREIGN KEY (IdPersona) REFERENCES PERSONA(IdPersona)
+);
+
+CREATE TABLE USUARIO_ROL (
+    IdUsuarioRol VARCHAR(10) NOT NULL,
+    IdUsuario VARCHAR(10) NOT NULL,
+    IdRol VARCHAR(10) NOT NULL,
+    FechaAsigna DATETIME NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdUsuarioRol),
+    FOREIGN KEY (IdUsuario) REFERENCES USUARIO(IdUsuario),
+    FOREIGN KEY (IdRol) REFERENCES ROL(IdRol)
+);
+
+CREATE TABLE ROL (
+    IdRol VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(25) NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdRol)
+);
+
+CREATE TABLE CLIENTE (
+    IdCliente VARCHAR(10) NOT NULL,
+    IdPersona VARCHAR(10) NOT NULL,
+    TipoCliente VARCHAR(20) NOT NULL,
+    CodigoCliente VARCHAR(20) NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdCliente),
+    FOREIGN KEY (IdPersona) REFERENCES PERSONA(IdPersona)
+);
+
+CREATE TABLE VENTA (
+    IdVenta VARCHAR(10) NOT NULL,
+    IdCliente VARCHAR(10) NOT NULL,
+    IdVendedor VARCHAR(10) NOT NULL,
+    Fecha DATETIME NOT NULL,
+    Total FLOAT NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdVenta),
+    FOREIGN KEY (IdCliente) REFERENCES CLIENTE(IdCliente)
+);
+
+CREATE TABLE DETALLE_VENTA (
+    IdDetalleVenta VARCHAR(10) NOT NULL,
+    IdVenta VARCHAR(10) NOT NULL,
+    IdProducto VARCHAR(10) NOT NULL,
+    Cantidad INT NOT NULL,
+    PrecioVenta FLOAT NOT NULL,
+    SubTotal FLOAT NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdDetalleVenta),
+    FOREIGN KEY (IdVenta) REFERENCES VENTA(IdVenta),
+    FOREIGN KEY (IdProducto) REFERENCES PRODUCTO(IdProducto)
+);
+
+CREATE TABLE DETALLE_INGRESO (
+    IdDetalleIng VARCHAR(10) NOT NULL,
+    IdProducto VARCHAR(10) NOT NULL,
+    IdIngreso VARCHAR(10) NOT NULL,
+    FechaVenc DATETIME NOT NULL,
+    Cantidad INT NOT NULL,
+    PrecioCosto FLOAT NOT NULL,
+    PrecioVenta FLOAT NOT NULL,
+    SubTotal FLOAT NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdDetalleIng),
+    FOREIGN KEY (IdProducto) REFERENCES PRODUCTO(IdProducto),
+    FOREIGN KEY (IdIngreso) REFERENCES INGRESO(IdIngreso)
+);
+
+CREATE TABLE INGRESO (
+    IdIngreso VARCHAR(10) NOT NULL,
+    IdProveedor VARCHAR(10) NOT NULL,
+    FechaIngreso DATETIME NOT NULL,
+    Total FLOAT NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdIngreso),
+    FOREIGN KEY (IdProveedor) REFERENCES PROVEEDOR(IdProveedor)
+);
+
+CREATE TABLE PROVEEDOR (
+    IdProveedor VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    Telefono VARCHAR(20) NOT NULL,
+    Direccion VARCHAR(20) NOT NULL,
+    Estado VARCHAR(15) NOT NULL,
+    PRIMARY KEY (IdProveedor)
+);
+
+CREATE TABLE PROVEE (
+    IdProvee VARCHAR(10) NOT NULL,
+    IdProducto VARCHAR(10) NOT NULL,
+    IdProveedor VARCHAR(10) NOT NULL,
+    Fecha DATETIME NOT NULL,
+    Precio VARCHAR(20) NOT NULL,
+    PRIMARY KEY (IdProvee),
+    FOREIGN KEY (IdProducto) REFERENCES PRODUCTO(IdProducto),
+    FOREIGN KEY (IdProveedor) REFERENCES PROVEEDOR(IdProveedor)
+);
+
+CREATE TABLE PRODUCTO (
+    IdProducto VARCHAR(10) NOT NULL,
+    IdTipoProducto VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    CodigoBarra VARCHAR(20) NOT NULL,
+    IdMarca VARCHAR(10) NOT NULL,
+    Unidad VARCHAR(20) NOT NULL,
+    Descripcion VARCHAR(20) NOT NULL,
+    Estado VARCHAR(20) NOT NULL,
+    PRIMARY KEY (IdProducto),
+    FOREIGN KEY (IdTipoProducto) REFERENCES TIPO_PRODUCTO(IdTipoProducto),
+    FOREIGN KEY (IdMarca) REFERENCES MARCA(IdMarca)
+);
+
+CREATE TABLE TIPO_PRODUCTO (
+    IdTipoProducto VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    Estado VARCHAR(20) NOT NULL,
+    PRIMARY KEY (IdTipoProducto)
+);
+
+CREATE TABLE MARCA (
+    IdMarca VARCHAR(10) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    Estado VARCHAR(20) NOT NULL,
+    PRIMARY KEY (IdMarca)
+);
+	
