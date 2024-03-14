@@ -202,6 +202,7 @@ insert into persona values('Rosa' ,'Fuentes' ,'+59165432198' ,'44679033' ,'rosa@
 insert into persona values('Teresa' ,'Galindo' ,'+59172938475' ,'4589023' ,'teresa@gmail.com','Inactivo');
 insert into persona values('Ulises' ,'Ibáñez' ,'+59169384752' ,'12819234' ,'ulises@gmail.com','Activo');
 insert into persona values('Valeria' ,'León' ,'+59161472583' ,'4516780' ,'valeria@gmail.com','Activo');
+insert into persona values('Marco' ,'Zamorano' ,'+59169585925' ,'12411632' ,'marco@gmail.com','Activo');
 
 SELECT * FROM PERSONA
 
@@ -872,3 +873,5 @@ insert into detalleing values (20, 80, '2023-01-14 03:47:29', 91, 180, 200, 180,
 
 
 select * from DETALLEING
+
+
