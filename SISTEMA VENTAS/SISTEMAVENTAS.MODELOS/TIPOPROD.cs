@@ -8,7 +8,7 @@ namespace SISTEMAVENTAS.MODELOS
 {
     public class TIPOPROD
     {
-        public string IdTipoProd { get; set; }
+        public int IdTipoProd { get; set; }
         public string Nombre { get; set; }
         public string Estado { get; set; }
     }

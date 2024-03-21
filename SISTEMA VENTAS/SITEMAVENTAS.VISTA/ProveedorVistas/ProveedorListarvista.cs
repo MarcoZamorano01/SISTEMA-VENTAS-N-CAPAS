@@ -23,5 +23,43 @@ namespace SITEMAVENTAS.VISTA.ProveedorVistas
         {
             dataGridView1.DataSource = bss.ListaProveedorBss();
         }
+
+        private void button2_Click(object sender, EventArgs e)//agregar
+        {
+            ProveedorInsertarVista fr = new ProveedorInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListaProveedorBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//editar
+        {
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveedorEditarVista fr = new ProveedorEditarVista(IdPersonaSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListaProveedorBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//eliminar
+        {
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este Proveedor?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarProveedorBss(IdPersonaSeleccionada);
+                dataGridView1.DataSource = bss.ListaProveedorBss();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)//seleccionar
+        {
+            IngresoVistas.IngresoInsertarVista.IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeVistas.ProveeInsertarVista.IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            IngresoVistas.IngresoEditarVista.IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeVistas.ProveeEditarVista.IdProveedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
     }
 }

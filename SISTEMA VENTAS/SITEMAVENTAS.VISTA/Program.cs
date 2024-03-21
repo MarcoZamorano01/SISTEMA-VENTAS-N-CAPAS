@@ -11,7 +11,25 @@ namespace SITEMAVENTAS.VISTA
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new NewFolder.PersonalListarVista());
+
+            //insercion
+            //Application.Run(new PersonaVistas.PersonaInsertarVista());
+            //Application.Run(new ClienteVistas.ClienteInsertarVista());
+            //Application.Run(new DetallelngVistas.DetalleIngInsertarVista());
+            //Application.Run(new DetalleVenVistas.DetalleVenInsertarVistas());
+            //Application.Run(new IngresoVistas.IngresoInsertarVista());
+            //Application.Run(new UsuarioVistas.UsuarioInsertarVista());
+            //Application.Run(new VentaVistas.VentaInsertarVista());
+            //Application.Run(new UsuarioRolVistas.UsuarioRolInsertarVista());
+            //Application.Run(new TipoProdVistas.TipoProdInsertarVista());
+            //Application.Run(new RolVistas.RolInsertarVista());
+            //Application.Run(new ProveedorVistas.ProveedorInsertarVista());
+            //Application.Run(new ProveeVistas.ProveeInsertarVista());
+            Application.Run(new ProductoVistas.ProductoInsertarVista());
+            //Application.Run(new MarcaVistas.MarcaInsertarVista());
+
+            //vistas
+            //Application.Run(new NewFolder.PersonalListarVista());
             //Application.Run(new ClienteVistas.ClienteListarVista());
             //Application.Run(new DetallelngVistas.DetallelngListarvista());
             //Application.Run(new DetalleVenVistas.DetalleVenListarvista());

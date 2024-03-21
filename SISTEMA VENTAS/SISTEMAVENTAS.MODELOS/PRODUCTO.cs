@@ -8,11 +8,11 @@ namespace SISTEMAVENTAS.MODELOS
 {
     public class PRODUCTO
     {
-        public string IdProducto { get; set; }
-        public string IdTipoProducto { get; set; }
+        public int IdProducto { get; set; }
+        public int IdTipoProducto { get; set; }
         public string Nombre { get; set; }
         public string CodigoBarra { get; set; }
-        public string IdMarca { get; set; }
+        public int IdMarca { get; set; }
         public int Unidad { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }

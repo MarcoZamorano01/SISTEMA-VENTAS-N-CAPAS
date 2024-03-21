@@ -8,10 +8,10 @@ namespace SISTEMAVENTAS.MODELOS
 {
     public class PROVEE
     {
-        public string IdProvee { get; set; }
-        public string IdProducto { get; set; }
-        public string Idproveedor { get; set; }
-        public string Fecha { get; set; }
+        public int IdProvee { get; set; }
+        public int IdProducto { get; set; }
+        public int Idproveedor { get; set; }
+        public DateTime Fecha { get; set; }
         public decimal Precio { get; set; }
     }
 }

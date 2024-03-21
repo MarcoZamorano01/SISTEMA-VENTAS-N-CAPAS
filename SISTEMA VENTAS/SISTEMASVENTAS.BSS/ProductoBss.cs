@@ -1,4 +1,5 @@
 ﻿using SISTEMASVENTAS.DAL;
+using SISTEMAVENTAS.MODELOS;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,22 @@ namespace SISTEMASVENTAS.BSS
         public DataTable ListaProductoBss()
         {
             return dal.ListaProductoDal();
+        }
+        public void InsertarProductoBss(PRODUCTO producto)
+        {
+            dal.InsertarProductoDal(producto);
+        }
+        public PRODUCTO ObtenerProductoIdBss(int id)
+        {
+            return dal.ObtenerProductoId(id);
+        }
+        public void EditarProductoBss(PRODUCTO prod)
+        {
+            dal.EditarProductoDal(prod);
+        }
+        public void EliminarProductoBss(int id)
+        {
+            dal.EliminarProductoDal(id);
         }
     }
 }

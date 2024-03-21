@@ -8,10 +8,10 @@ namespace SISTEMAVENTAS.MODELOS
 {
     public class USUARIOROL
     {
-        public string IdusuarioRol { get; set; }
-        public string IdUsario { get; set; }
-        public string IdRol { get; set; }
-        public string FechaAsigna { get; set; }
+        public int IdusuarioRol { get; set; }
+        public int IdUsario { get; set; }
+        public int IdRol { get; set; }
+        public DateTime FechaAsigna { get; set; }
         public string Estado { get; set; }
     }
 }

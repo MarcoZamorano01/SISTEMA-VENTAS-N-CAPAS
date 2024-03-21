@@ -23,5 +23,41 @@ namespace SITEMAVENTAS.VISTA.TipoProdVistas
         {
             dataGridView1.DataSource = bss.ListaTipoProdBss();
         }
+
+        private void button2_Click(object sender, EventArgs e)//agregar
+        {
+            TipoProdInsertarVista fr = new TipoProdInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListaTipoProdBss();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//editar
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            TipoProdEditarVista fr = new TipoProdEditarVista(IdSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListaTipoProdBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//eliminar
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este TipoProd?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarTipoProdBss(IdSeleccionada);
+                dataGridView1.DataSource = bss.ListaTipoProdBss();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)//seleccionar
+        {
+            ProductoVistas.ProductoInsertarVista.IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProductoVistas.ProductoEditarVista.IdTipoProdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
     }
 }

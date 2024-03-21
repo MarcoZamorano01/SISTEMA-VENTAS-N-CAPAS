@@ -1,4 +1,5 @@
 ﻿using SISTEMASVENTAS.DAL;
+using SISTEMAVENTAS.MODELOS;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,22 @@ namespace SISTEMASVENTAS.BSS
         public DataTable ListaRolBss()
         {
             return dal.ListaRolDal();
+        }
+        public void InsertarRolBss(ROL rol)
+        {
+            dal.InsertarRolDal(rol);
+        }
+        public ROL ObtenerRolIdBss(int id)
+        {
+            return dal.ObtenerRolId(id);
+        }
+        public void EditarRolBss(ROL r)
+        {
+            dal.EditarRolDal(r);
+        }
+        public void EliminarRolBss(int id)
+        {
+            dal.EliminarRolDal(id);
         }
     }
 }

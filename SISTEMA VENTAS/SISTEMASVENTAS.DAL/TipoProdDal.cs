@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SISTEMAVENTAS.MODELOS;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,6 +15,36 @@ namespace SISTEMASVENTAS.DAL
             string cosulta = "select * from tipoprod";
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
+        }
+        public void InsertarTipoProdDal(TIPOPROD tiprod)
+        {
+            string consulta = "insert into tipoprod values('" + tiprod.Nombre + "'," + "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
+
+        public TIPOPROD ObtenerTipoProdId(int Id)
+        {
+            string consulta = "select * from tipoprod where idtipoprod=" + Id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            TIPOPROD tiprod = new TIPOPROD();
+            if (tabla.Rows.Count > 0)
+            {
+                tiprod.IdTipoProd = Convert.ToInt32(tabla.Rows[0]["IdTipoProd"]);
+                tiprod.Nombre = tabla.Rows[0]["Nombre"].ToString();
+                tiprod.Estado = tabla.Rows[0]["Estado"].ToString();
+            }
+            return tiprod;
+        }
+        public void EditarTipoProdDal(TIPOPROD tiprod)
+        {
+            string consulta = "update tipoprod set Nombre='" + tiprod.Nombre + "' " + "where IdTipoProd=" + tiprod.IdTipoProd;
+            conexion.Ejecutar(consulta);
+        }
+
+        public void EliminarTipoProdDal(int id)
+        {
+            string consulta = "delete from tipoprod where idtipoprod=" + id;
+            conexion.Ejecutar(consulta);
         }
     }
 }
