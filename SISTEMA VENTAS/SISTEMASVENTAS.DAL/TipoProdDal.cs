@@ -16,6 +16,12 @@ namespace SISTEMASVENTAS.DAL
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
         }
+        public DataTable NuevaListaTipoProdDal()
+        {
+            string consulta = "SELECT TP.IDTIPOPROD, P.NOMBRE AS PRODUCTO, P.DESCRIPCION,P.UNIDAD,TP.ESTADO\r\nFROM TIPOPROD TP\r\nINNER JOIN PRODUCTO P ON P.IDTIPOPROD = TP.IDTIPOPROD\r\n";
+
+            return conexion.EjecutarDataTabla(consulta, "asda");
+        }
         public void InsertarTipoProdDal(TIPOPROD tiprod)
         {
             string consulta = "insert into tipoprod values('" + tiprod.Nombre + "'," + "'Activo')";

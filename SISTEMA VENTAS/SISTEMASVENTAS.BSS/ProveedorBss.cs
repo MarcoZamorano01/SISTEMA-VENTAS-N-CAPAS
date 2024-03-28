@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaProveedorDal();
         }
+        public DataTable NuevaListaProveedorBss()
+        {
+            return dal.NuevaListaProveedorDal();
+        }
         public void InsertarProveedorBss(PROVEEDOR proveedor)
         {
             dal.InsertarProveedorDal(proveedor);

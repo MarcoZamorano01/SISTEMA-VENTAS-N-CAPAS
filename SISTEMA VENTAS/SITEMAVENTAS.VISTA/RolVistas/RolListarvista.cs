@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.RolVistas
 
         private void RolListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaRolBss();
+            //dataGridView1.DataSource = bss.ListaRolBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaRolBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

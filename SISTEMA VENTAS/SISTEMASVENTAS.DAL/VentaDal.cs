@@ -16,6 +16,13 @@ namespace SISTEMASVENTAS.DAL
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
         }
+        public DataTable NuevaListaVentaDal()
+        {
+            string consulta = "";
+
+            return conexion.EjecutarDataTabla(consulta, "asda");
+        }
+
         public void InsertarVentaDal(VENTA ven)
         {
             string consulta = "insert into venta values('" + ven.IdCliente + "','" + ven.IdVendedor + "'," + "'" + ven.Fecha + "','" + ven.Total + "'," + "'Exitoso')";

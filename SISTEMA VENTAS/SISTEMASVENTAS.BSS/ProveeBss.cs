@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaProveeDal();
         }
+        public DataTable NuevaListaProveeBss()
+        {
+            return dal.NuevaListaProveeDal();
+        }
         public void InsertarProveeBss(PROVEE provee)
         {
             dal.InsertarProveeDal(provee);

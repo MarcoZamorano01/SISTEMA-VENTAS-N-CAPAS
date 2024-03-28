@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.IngresoVistas
 
         private void IngresoListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaIngresoBss();
+            //dataGridView1.DataSource = bss.ListaIngresoBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaIngresoBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

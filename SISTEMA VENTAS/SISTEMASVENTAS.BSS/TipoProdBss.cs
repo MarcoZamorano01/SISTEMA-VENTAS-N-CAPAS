@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaTipoProdDal();
         }
+        public DataTable NuevaListaTipoProdBss()
+        {
+            return dal.NuevaListaTipoProdDal();
+        }
         public void InsertarTipoProdBss(TIPOPROD tipoprod)
         {
             dal.InsertarTipoProdDal(tipoprod);

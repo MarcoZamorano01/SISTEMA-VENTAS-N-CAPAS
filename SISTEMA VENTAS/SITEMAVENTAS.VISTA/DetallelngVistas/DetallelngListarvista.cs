@@ -24,7 +24,9 @@ namespace SITEMAVENTAS.VISTA.DetallelngVistas
 
         private void DetallelngListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaDetallelngBss();
+            //dataGridView1.DataSource = bss.ListaDetallelngBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaDetealleIngBss();
         }
 
         private void button1_Click(object sender, EventArgs e) //seleccionar

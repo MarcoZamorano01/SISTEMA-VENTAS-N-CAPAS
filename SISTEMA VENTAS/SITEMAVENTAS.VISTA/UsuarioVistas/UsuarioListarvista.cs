@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.UsuarioVistas
 
         private void UsuarioListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaUsuarioBss();
+            //dataGridView1.DataSource = bss.ListaUsuarioBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaUsuarioBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

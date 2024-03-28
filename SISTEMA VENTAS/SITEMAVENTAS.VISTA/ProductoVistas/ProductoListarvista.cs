@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.ProductoVistas
 
         private void ProductoListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaProductoBss();
+            //dataGridView1.DataSource = bss.ListaProductoBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaProductoBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

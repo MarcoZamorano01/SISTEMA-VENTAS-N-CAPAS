@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.MarcaVistas
 
         private void MarcaListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaMarcaBss();
+            //dataGridView1.DataSource = bss.ListaMarcaBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaMarcaBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

@@ -16,6 +16,12 @@ namespace SISTEMASVENTAS.DAL
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
         }
+        public DataTable NuevaListaIngresoDal()
+        {
+            string consulta = "SELECT I.IDINGRESO, P.NOMBRE AS NOM_PROVEEDOR, P.DIRECCION, P.TELEFONO, I.FECHAINGRESO, I.TOTAL, I.ESTADO\r\nFROM INGRESO I\r\nINNER JOIN PROVEEDOR P ON P.IDPROVEEDOR = I.IDPROVEEDOR";
+
+            return conexion.EjecutarDataTabla(consulta, "asda");
+        }
         public void InsertarIngresoDal(INGRESO ing)
         {
             string consulta = "insert into ingreso values('" + ing.IdProveedor + "','" + ing.FechaIngreso + "'," + "'" + ing.Total +  "'," + "'Activo')";

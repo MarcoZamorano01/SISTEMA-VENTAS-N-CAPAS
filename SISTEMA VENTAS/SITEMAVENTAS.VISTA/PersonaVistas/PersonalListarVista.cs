@@ -24,7 +24,9 @@ namespace SITEMAVENTAS.VISTA.NewFolder
 
         private void PersonalListarVista_Load(object sender, EventArgs e)//listar al salir la ventana
         {
-            dataGridView1.DataSource = bss.ListaPersonaBss();
+            //dataGridView1.DataSource = bss.ListaPersonaBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaPersonaBss();
         }
 
         private void button1_Click(object sender, EventArgs e)//seleccionar

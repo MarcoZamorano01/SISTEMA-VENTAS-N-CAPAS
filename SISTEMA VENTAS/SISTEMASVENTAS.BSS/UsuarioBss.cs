@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaUsuarioDal();
         }
+        public DataTable NuevaListaUsuarioBss()
+        {
+            return dal.NuevaListaUsuarioDal();
+        }
         public void InsertarUsuarioBss(USUARIO usuario)
         {
             dal.InsertarUsuarioDal(usuario);

@@ -16,6 +16,12 @@ namespace SISTEMASVENTAS.DAL
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
         }
+        public DataTable NuevaListaDetalleIngDal()
+        {
+            string consulta = "SELECT DETALLEING.IDDETALLEING, PRODUCTO.NOMBRE, INGRESO.FECHAINGRESO,DETALLEING.FECHAVENC, DETALLEING.CANTIDAD, \r\n\t\tDETALLEING.PRECIOCOSTO, DETALLEING.PRECIOVENTA, DETALLEING.SUBTOTAL, DETALLEING.ESTADO\r\nFROM DETALLEING \r\nINNER JOIN INGRESO ON DETALLEING.IDINGRESO = INGRESO.IDINGRESO \r\nINNER JOIN PRODUCTO ON DETALLEING.IDPRODUCTO = PRODUCTO.IDPRODUCTO";
+
+            return conexion.EjecutarDataTabla(consulta, "asda");
+        }
         public void InsertarDetalleIngDal(DETALLEING detalleing)
         {
             string consulta = "insert into detalleing values('" + detalleing.IdIngreso + "','" + detalleing.IdProducto + "'," + "'" + detalleing.FechaVenc + "','" + detalleing.Cantidad + "','" + detalleing.PrecioCosto + "','" + detalleing.PrecioVenta + "','" + detalleing.SubTotal + "'," + "'Exitoso')";

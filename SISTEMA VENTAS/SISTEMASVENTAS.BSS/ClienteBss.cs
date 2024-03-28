@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaClienteDal();
         }
+        public DataTable NuevaListaClienteBss()
+        {
+            return dal.NuevaListaClienteDal();
+        }
         public void InsertarClienteBss(CLIENTE cliente)
         {
             dal.InsertarClienteDal(cliente);

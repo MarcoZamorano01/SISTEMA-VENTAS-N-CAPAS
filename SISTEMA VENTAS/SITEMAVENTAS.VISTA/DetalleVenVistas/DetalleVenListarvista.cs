@@ -23,7 +23,9 @@ namespace SITEMAVENTAS.VISTA.DetalleVenVistas
 
         private void DetalleVenListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaDetalleVenBss();
+            //dataGridView1.DataSource = bss.ListaDetalleVenBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaDetalleVenBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

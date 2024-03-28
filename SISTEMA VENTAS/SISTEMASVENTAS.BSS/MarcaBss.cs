@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaMarcaDal();
         }
+        public DataTable NuevaListaMarcaBss()
+        {
+            return dal.NuevaListaMarcaDal();
+        }
         public void InsertarMarcaBss(MARCA marca)
         {
             dal.InsertarMarcaDal(marca);

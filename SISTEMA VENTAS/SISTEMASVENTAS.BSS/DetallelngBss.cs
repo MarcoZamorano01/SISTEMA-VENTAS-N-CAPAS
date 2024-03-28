@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaDetallelngDal();
         }
+        public DataTable NuevaListaDetealleIngBss()
+        {
+            return dal.NuevaListaDetalleIngDal();
+        }
         public void InsertarDetalleIngBss(DETALLEING detalleing)
         {
             dal.InsertarDetalleIngDal(detalleing);

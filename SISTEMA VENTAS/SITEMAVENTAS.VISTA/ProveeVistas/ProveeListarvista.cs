@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.ProveeVistas
 
         private void ProveeListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaProveeBss();
+            //dataGridView1.DataSource = bss.ListaProveeBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaProveeBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar

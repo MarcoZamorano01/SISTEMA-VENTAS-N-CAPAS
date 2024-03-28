@@ -16,6 +16,12 @@ namespace SISTEMASVENTAS.DAL
             DataTable Lista = conexion.EjecutarDataTabla(cosulta, "tabla");
             return Lista;
         }
+        public DataTable NuevaListaDetalleVenDal()
+        {
+            string consulta = "SELECT DETALLEVENTA.IDDETALLEVENTA, VENTA.FECHA, PRODUCTO.NOMBRE, \r\n\t\tDETALLEVENTA.CANTIDAD,DETALLEVENTA.PRECIOVENTA, DETALLEVENTA.SUBTOTAL, DETALLEVENTA.ESTADO\r\nFROM DETALLEVENTA \r\nINNER JOIN VENTA ON DETALLEVENTA.IDVENTA = VENTA.IDVENTA \r\nINNER JOIN PRODUCTO ON DETALLEVENTA.IDPRODUCTO = PRODUCTO.IDPRODUCTO\r\n";
+
+            return conexion.EjecutarDataTabla(consulta, "asda");
+        }
         public void InsertarDetalleVenDal(DETALLEVENT detallevent)
         {
             string consulta = "insert into detalleventa values('" + detallevent.IdVenta + "'," + "'" + detallevent.IdProducto + "'," + "'" + detallevent.Cantidad + "'," + "'" + detallevent.PrecioVenta + "'," + "'" + detallevent.SubTotal + "'," + "'Exitoso')";

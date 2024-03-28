@@ -23,7 +23,9 @@ namespace SITEMAVENTAS.VISTA.ClienteVistas
 
         private void ClienteListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaClienteBss();
+            //dataGridView1.DataSource = bss.ListaClienteBss();
+            //nueva lista
+            dataGridView1.DataSource = bss.NuevaListaClienteBss();
         }
 
         private void button1_Click(object sender, EventArgs e)//seleccionar

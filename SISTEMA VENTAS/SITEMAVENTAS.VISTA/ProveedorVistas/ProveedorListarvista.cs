@@ -21,7 +21,9 @@ namespace SITEMAVENTAS.VISTA.ProveedorVistas
 
         private void ProveedorListarvista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListaProveedorBss();
+            //dataGridView1.DataSource = bss.ListaProveedorBss();
+            //nueva
+            dataGridView1.DataSource = bss.NuevaListaProveedorBss();
         }
 
         private void button2_Click(object sender, EventArgs e)//agregar
