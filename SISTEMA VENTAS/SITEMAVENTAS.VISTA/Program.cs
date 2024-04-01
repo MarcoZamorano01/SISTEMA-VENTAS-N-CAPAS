@@ -29,7 +29,7 @@ namespace SITEMAVENTAS.VISTA
             //Application.Run(new Examen2Vistas.DosListarVista());
             //Application.Run(new Examen2Vistas.TresListarVista());
             //Application.Run(new Examen2Vistas.CuatroListarVista());
-            Application.Run(new Examen2Vistas.CincoListarVista());
+            //Application.Run(new Examen2Vistas.CincoListarVista());
             //Application.Run(new Examen2Vistas.SeisListarVista());
             //Application.Run(new Examen2Vistas.SieteListarVista());
             //Application.Run(new Examen2Vistas.OchoListarVista());
