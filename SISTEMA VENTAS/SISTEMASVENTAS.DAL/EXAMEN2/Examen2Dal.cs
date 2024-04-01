@@ -35,7 +35,7 @@ namespace SISTEMASVENTAS.DAL.EXAMEN2
         }
         public DataTable LitarCincoDal()//el cinco
         {
-            string consulta = "SELECT P.IDPRODUCTO, P.NOMBRE, DG.FECHAVENC\r\nFROM PRODUCTO P\r\nINNER JOIN DETALLEING DG ON DG.IDPRODUCTO = P.IDPRODUCTO\r\nWHERE YEAR(FECHAVENC) = 2024 AND MONTH(FECHAVENC)= 04";
+            string consulta = "SELECT P.IDPRODUCTO, P.NOMBRE, DG.FECHAVENC\r\nFROM PRODUCTO P\r\nINNER JOIN DETALLEING DG ON DG.IDPRODUCTO = P.IDPRODUCTO\r\nWHERE YEAR(FECHAVENC) = 2024 AND MONTH(FECHAVENC)= 04 AND DAY(FECHAVENC) >= 1\r\nORDER BY DG.FECHAVENC";
 
             return conexion.EjecutarDataTabla(consulta, "asda");
         }
