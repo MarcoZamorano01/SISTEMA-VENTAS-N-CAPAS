@@ -17,7 +17,25 @@ namespace SITEMAVENTAS.VISTA
             //Application.Run(new FORMULARIOSVISTAS.RegistrarProveedorVistas());
             //LISTAR
             //Application.Run(new VENTASREALIVISTAS.VentasRealizadasVistas());
-            
+            //PLATAFORMA
+            //Application.Run(new PLATAFORMAVISTAS.TiendaVirtualUsuarioVistas());
+            //Application.Run(new PLATAFORMAVISTAS.PlataformaPersonalVistas());
+
+
+
+            //EXAMEN2
+            //listas
+            //Application.Run(new Examen2Vistas.UnoListarVistas());
+            //Application.Run(new Examen2Vistas.DosListarVista());
+            //Application.Run(new Examen2Vistas.TresListarVista());
+            //Application.Run(new Examen2Vistas.CuatroListarVista());
+            //Application.Run(new Examen2Vistas.CincoListarVista());
+            //Application.Run(new Examen2Vistas.SeisListarVista());
+            //Application.Run(new Examen2Vistas.SieteListarVista());
+            Application.Run(new Examen2Vistas.OchoListarVista());
+            //Application.Run(new Examen2Vistas.NueveListarVista());
+            //Application.Run(new Examen2Vistas.DiesListarVista());
+
 
 
 
@@ -52,7 +70,7 @@ namespace SITEMAVENTAS.VISTA
             //Application.Run(new RolVistas.RolListarvista());
             //Application.Run(new TipoProdVistas.TipoProdListarvista());
             //Application.Run(new UsuarioVistas.UsuarioListarvista());
-            Application.Run(new UsuarioRolVistas.UsuarioRolListarvista());
+            //Application.Run(new UsuarioRolVistas.UsuarioRolListarvista());
             //Application.Run(new VentaVistas.VentaListarvista());
 
         }
