@@ -14,13 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="INFORPROVEEVISTAS\" />
-    <Folder Include="FORMAPAGOVISTAS\" />
-    <Folder Include="TIPOPRODUCTVISTAS\" />
-    <Folder Include="VENTAPRODVISTAS\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

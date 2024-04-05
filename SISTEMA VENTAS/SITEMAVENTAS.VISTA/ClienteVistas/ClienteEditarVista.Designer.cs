@@ -47,6 +47,7 @@
             button3.TabIndex = 17;
             button3.Text = "SELECCIONAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox3
             // 

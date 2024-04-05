@@ -1,5 +1,7 @@
 ﻿using SISTEMASVENTAS.BSS;
 using SISTEMAVENTAS.MODELOS;
+using SITEMAVENTAS.VISTA.LISTASVISTAS;
+using SITEMAVENTAS.VISTA.PLATAFORMAVISTAS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,15 +33,14 @@ namespace SITEMAVENTAS.VISTA.FORMULARIOSVISTAS
 
             bss.InsertarPersonaBss(p);
             MessageBox.Show("se guardo correctamente la persona");
+            
         }
 
         private void button2_Click(object sender, EventArgs e)//cancelar
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
+            this.Hide();
+            BIENVENIDA intro = new BIENVENIDA();
+            intro.Show();
         }
     }
 }

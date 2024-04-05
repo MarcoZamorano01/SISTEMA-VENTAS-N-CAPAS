@@ -37,9 +37,14 @@ namespace SITEMAVENTAS.VISTA.ClienteVistas
             cli.IdPersona = Convert.ToInt32(textBox1.Text);
             cli.TipoCliente = textBox2.Text;
             cli.CodigoCliente = textBox3.Text;
-            
+
             bss.EditarClienteBss(cli);
             MessageBox.Show("Datos Actualizados");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

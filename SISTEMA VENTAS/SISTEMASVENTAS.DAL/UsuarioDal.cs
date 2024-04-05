@@ -34,7 +34,7 @@ namespace SISTEMASVENTAS.DAL
             USUARIO usua = new USUARIO();
             if (tabla.Rows.Count > 0)
             {
-                usua.IdUsario = Convert.ToInt32(tabla.Rows[0]["IdUsario"]);
+                usua.IdUsario = Convert.ToInt32(tabla.Rows[0]["IdUsuario"]);
                 usua.IdPersona = Convert.ToInt32(tabla.Rows[0]["IdPersona"]);
                 usua.NombreUser = tabla.Rows[0]["NombreUser"].ToString();
                 usua.Contraseña = tabla.Rows[0]["Contraseña"].ToString();

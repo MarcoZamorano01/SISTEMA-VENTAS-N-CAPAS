@@ -1,5 +1,7 @@
 ﻿using SISTEMASVENTAS.BSS;
 using SISTEMAVENTAS.MODELOS;
+using SITEMAVENTAS.VISTA.LISTASVISTAS;
+using SITEMAVENTAS.VISTA.PLATAFORMAVISTAS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,9 +23,9 @@ namespace SITEMAVENTAS.VISTA.FORMULARIOSVISTAS
         ProveedorBss bss = new ProveedorBss();
         private void button2_Click(object sender, EventArgs e)//cancelar
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
+            this.Hide();
+            PlataformaPersonalVistas PERSONAL = new PlataformaPersonalVistas();
+            PERSONAL.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)//guardar

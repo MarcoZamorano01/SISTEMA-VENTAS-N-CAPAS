@@ -16,6 +16,10 @@ namespace SISTEMASVENTAS.BSS
         {
             return dal.ListaProveedorDal();
         }
+        public DataTable ListaProveedorContactoBss()
+        {
+            return dal.ListaProveedorContactoDal();
+        }
         public DataTable NuevaListaProveedorBss()
         {
             return dal.NuevaListaProveedorDal();

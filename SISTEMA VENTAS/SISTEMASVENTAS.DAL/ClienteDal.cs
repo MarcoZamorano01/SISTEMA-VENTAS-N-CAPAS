@@ -48,6 +48,8 @@ namespace SISTEMASVENTAS.DAL
             conexion.Ejecutar(consulta);
         }
 
+        //string consulta = " SELECT COUNT(*) AS TotalPedidos FROM PEDIDO WHERE IDCLIENTE = " + id;
+        //return conexion.EjecutarDataTabla(consulta, "fsdf");
         public void EliminarClienteDal(int id)
         {
             string consulta = "delete from cliente where idcliente=" + id;

@@ -12,12 +12,14 @@ namespace SITEMAVENTAS.VISTA
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //PROYECTO
+
             //INSERTAR
             //Application.Run(new FORMULARIOSVISTAS.RegistrarseVistas());
             //Application.Run(new FORMULARIOSVISTAS.RegistrarProveedorVistas());
             //LISTAR
             //Application.Run(new VENTASREALIVISTAS.VentasRealizadasVistas());
             //PLATAFORMA
+            Application.Run(new PLATAFORMAVISTAS.BIENVENIDA());
             //Application.Run(new PLATAFORMAVISTAS.TiendaVirtualUsuarioVistas());
             //Application.Run(new PLATAFORMAVISTAS.PlataformaPersonalVistas());
 

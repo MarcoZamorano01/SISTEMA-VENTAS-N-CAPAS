@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SISTEMASVENTAS.DAL.EXAMEN2
 {
-    public class Examen2Dal
+    public class Examen2Dal//POR MARCO ANDRES ZAMORANO ARAMAYO
     {
         public DataTable LitarUnoDal()//el uno
         {
